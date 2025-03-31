@@ -2,7 +2,8 @@ package main
 
 import "fmt"
 
-// customAppendGeneric given an array of ints and an element, it appends and element at the end, then returns the array
+// customAppendGeneric given an array of integers and an element, it appends and element at the end,
+// then returns the array
 func customAppendGeneric[k comparable](arr []k, elem k) []k {
 	var length = len(arr)
 	var tmp = make([]k, length+1)
