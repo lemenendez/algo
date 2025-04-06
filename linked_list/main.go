@@ -1,40 +1,26 @@
 package main
 
-import "fmt"
-
-type list[k comparable] struct {
-	head   *node[k]
-	tail   *node[k]
-	length int
-}
-
-func (l *list[k]) add(data k) {
-	n := &node[k]{data: data}
-	l.tail.next = n
-	l.tail = n
-}
-
-func (l *list[k]) print() {
-	for n := l.head; n != nil; n = n.next {
-		fmt.Print(n.data)
-	}
-}
-
-type node[k comparable] struct {
-	data k
-	next *node[k]
-}
-
-func newList[k comparable](data k) *list[k] {
-	head := &node[k]{data: data}
-	tail := head
-	lst := &list[k]{head: head, tail: tail}
-	return lst
-}
+import (
+	"fmt"
+	"github.com/lemenendez/algo/ds"
+)
 
 func main() {
-	lst := newList("hola")
-	lst.add("mundo")
 
-	lst.print()
+	ls2 := ds.NewLinkedList(1)
+	ls2.Append(3).
+		Append(4).
+		Append(2)
+	ls2.Walker(func(k int) {
+		fmt.Println(k)
+	})
+
+	mlst := ds.NewLinkedList(1).
+		Append(4).
+		Append(6).
+		Merge(ds.NewLinkedList(1).Append(3).Append(5))
+	mlst.Walker(func(k int) {
+		fmt.Println(k)
+	})
+
 }
