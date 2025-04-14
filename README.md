@@ -13,6 +13,8 @@
 9. [Common Words](strings/01_common_words.go) strings O(n+m)
 10. [Two Sum](arrs2/01_sum.go) arrays O(n) *
 11. [K Closest Points](arrs2/02_k_distance.go) arrays O (N * Long(N)) * **
+12. [Queue](ds/queue.go) generic queue using an slice
+13. [Neuron](nn/simple.go) basic neuron
 
 
 * study later
