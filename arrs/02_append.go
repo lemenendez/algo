@@ -14,7 +14,7 @@ func customAppendGeneric[k comparable](arr []k, elem k) []k {
 	return tmp
 }
 
-// customAppend given an array of ints and an element, it appends and element at the end, then returns the array
+// customAppend given an array of integers and an element, it appends and element at the end, then returns the array
 func customAppend(arr []int, elem int) []int {
 	var length = len(arr)
 	var tmp = make([]int, length+1)
